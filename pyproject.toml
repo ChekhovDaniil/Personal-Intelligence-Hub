@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "intelligence-automation-hub"
+version = "0.1.0"
+description = "Intelligence & Automation Hub"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "pydantic",
+    "uvicorn",
+]
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "httpx",
+]
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
